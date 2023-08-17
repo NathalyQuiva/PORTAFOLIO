@@ -68,3 +68,34 @@ darkButton.addEventListener('click', function () {
     }
   }
 });
+
+
+//Job Section
+
+const jobSection = document.querySelector('#jobSection');
+const articles = document.querySelectorAll('#jobSection article');
+
+jobSection.addEventListener('click', (event) => {
+  const id = event.target.dataset.id;
+
+  if (id) {
+    articles.forEach((article) => {
+      article.classList.add('hidden');
+    });
+    const element = document.getElementById(id);
+    element.classList.remove('hidden');
+  }
+});
+
+const jobLinks = document.querySelectorAll('#jobSection button');
+const firstLink = document.querySelector('#link1');
+
+jobLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    firstLink.classList.remove(
+      'border-sky-500',
+      'bg-white',
+      'dark:bg-slate-700'
+    );
+  });
+});
