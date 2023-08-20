@@ -41,15 +41,15 @@
             id="menu" 
             class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden">
                 <ul  class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full">
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Quién Soy</a></li>
+                    <li   class="md:px-5 hover:text-sky-600"><a href="#quienSoy">Quién Soy</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Habilidades</a></li>
+                    <li  class="md:px-5 hover:text-sky-600"><a href="#habilidades">Habilidades</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Experiencia</a></li>
+                    <li class="md:px-5 hover:text-sky-600"><a href="#experiencia">Experiencia</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Proyectos</a></li>
+                    <li class="md:px-5 hover:text-sky-600"><a href="#proyecto">Proyectos</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="">Contáctame</a></li>
+                    <li  id="contactameButton" class="md:px-5 hover:text-sky-600"><a href="#contact">Contáctame</a></li>
 
                 </ul>
                 <!--Modo oscuro-->
@@ -74,22 +74,29 @@
         </nav>
 
 
-
     </header>
 
     <main>
 
-        <section class="my-0 flex flex.col  lg:flex-row  lg:h-[500px]">
+        <section   id="quienSoy"   class="my-0 flex flex.col  lg:flex-row  lg:h-[500px]">
             <div class="p-10 lg:w-[80%]">
                 <h1 class="text-sky-600 dark:text-sky-300  text-2xl font-bold  tracking-widest  leading-10"> Hola, soy </h1>
                 <p class=" py-2  text-3xl font-bold text-slate-600  dark:text-slate-300">Nathaly Quiva</p>
                 <p class="text-3xl font-bold text-slate-500  dark:text-slate-600" >Desarrolladora Web Full Stack</p>
                 <p class="mt-5  text-lg text-slate-500">Soy una apasionada Desarrolladora Web Full Stack Junior con una sólida formación en ingeniería petrolera, experiencia como profesor de matemáticas-física. Mi combinación única de habilidades técnicas y analíticas me permite abordar la resolución de problemas con un enfoque creativo, lo que me ayuda a crear aplicaciones web innovadoras y fáciles de usar.</p>
 
+              
+              
                 <!--Redes-->
-                <div class="py-6">
+                <div class=" py-6">
                     
-                    <a href="" class="pr-2 text-2xl hover:text-sky-600 dark:text-white hover:dark:text-sky-600""
+                  <a href="./img/Full Stack Junior. Ingeniero Petróleos Nathaly Quiva.pdf"
+                  class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg dark:text-white tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"target="_blank" download
+                >
+                  Descargar Hoja de Vida
+              </a> 
+
+                    <a href="https://www.linkedin.com/in/nathalyquiva/" class="pr-2 text-2xl hover:text-sky-600 dark:text-white hover:dark:text-sky-600""
                       ><i class="bi bi-linkedin px-2 "></i
                     ></a>
                     <a href="" class="pr-2 text-2xl hover:text-sky-600   dark:text-white hover:dark:text-sky-600"
@@ -111,9 +118,62 @@
     ></div>-->
   </div>
         </section>
-        <h2 
+
+
+<!--habilidades-->
+ <h2 id="habilidades" 
+        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8" >Habilidades</h2>
+<section class="my-12 flex flex-col w-[84%] m-auto  lg:flex-row lg:w-[87%] lg:my-28"  > 
+        <ul>
+            <li class="flex items-center py-2">
+                <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+                
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Empatía 
+       
+                </p>
+              </li>
+            <li class="flex items-center py-2">
+                <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+                
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Comunicacion asertiva 
+       
+                </p>
+              </li> 
+            <li class="flex items-center py-2">
+               <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+               
+               <p class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Adaptabilidad 
+      
+               </p>
+             </li>
+      
+             <li class="flex items-center py-2">
+              <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+              
+              <p  class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Proactiva
+              </p>
+            </li>
+            <li class="flex items-center py-2">
+                <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+                
+                <p  class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Disponibilidad y capacidad de aprendizaje
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span  class="pr-2 text-sky-500 font-black">&#9655 </span>
+                
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5"> Entre otras 
+       
+                </p>
+              </li>
+         </ul>
+        </section>
+
+        
+
+        <h2 id="experiencia"
         class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8" >Experiencia Laboral</h2>
-        <section class="my-12 flex flex-col w-[84%] m-auto  lg:flex-row lg:w-[87%] lg:my-28"  id="jobSection">
+        <section   class="my-12 flex flex-col w-[84%] m-auto  lg:flex-row lg:w-[87%] lg:my-28"  id="jobSection">
 
             <div class="flex justify-between  lg:flex-col  lg:w-[20%]">
 
@@ -126,15 +186,11 @@
             Henry Heroe
             </button>
 
-
             <button type="button"  data-id="job2" class="border-b-2  hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white  focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700  lg:border-1-2  lg:border-b-0  lg:h-full lg:text-left dark:text-cyan-50">Desarrolladora Back End </button>
-
 
             <button type="button"  data-id="job3"class="border-b-2  hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white  focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700  lg:border-1-2  lg:border-b-0  lg:h-full lg:text-left dark:text-cyan-50">Asesora acádemica personalizada </button>
 
-
             <button type="button"  data-id="job4" class="border-b-2  hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white  focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700  lg:border-1-2  lg:border-b-0  lg:h-full lg:text-left dark:text-cyan-50">Profesora de matemáticas, física y tecnología</button>
-
 
             <button type="button"  data-id="job5" class="border-b-2  hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white  focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700  lg:border-1-2  lg:border-b-0  lg:h-full lg:text-left dark:text-cyan-50">Simulación computacional </button>
             </div>
@@ -143,7 +199,7 @@
 <div class="my-5 lg:px-10  lg:my-0 lg:maix-w-[800px]">
 <!--Job1-->
   <article id="job1">
-      <h3 class="dark:text-cyan-50"> Enseñanza JavaScript  <span class="text-sky-500 font-bold text-lg ">@Henry</span></h3>
+      <h3 class="dark:text-cyan-50 "> Enseñanza JavaScript  <span class="text-sky-500 font-bold text-lg ">@Henry</span></h3>
       <h4 class="text-sm pb-5 dark:text-cyan-50">Julio 2023- Agosto 2023</h4>
   <ul>
       <li class="flex items-center py-2">
@@ -162,7 +218,6 @@
       </li>
    </ul>
  </article>
-
 
 <!--Secciones ocultas-->
 
@@ -243,7 +298,7 @@
  <!--Job4-->
 
      
-    <article id="job4" class="hidden" >
+    <article id="job4" class="hidden">
         <h3 class="dark:text-cyan-50"> Profesora matématicas y física <span class="text-sky-500 font-bold text-lg ">@Instituto Henry Wallon</span></h3>
         <h4 class="text-sm pb-5 dark:text-cyan-50">Febrero 2018 - noviembre 2018</h4>
     <ul>
@@ -278,7 +333,6 @@
      </ul>
    </article>
  
-
 
 <!--Job5-->
 
@@ -322,22 +376,22 @@
 
         </section>
 
+
+
         <!--Proyectos-->
        
-      <h3
-      class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center"
-    >
-      Mis Ultimos Proyectos
-    </h3>
-
-    <section class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row">
+        <h2 id="proyecto"
+        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8" >Mis Últimos Proyectos </h2>
+    
+    <section  class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row lg:w-[80%] lg:my-28">
 <!-- primer proyecto-->
-<div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
-    <div class="m-2 ">
-                <img src="./img/profinder.jpeg" alt="" class="opacity-80 hover:opacity-100"/>
+<div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5  w-full ">
+    <div class="m-2 tracking-widest  w-full  text-center px-5  ">
+                <img  src="./img/profinder.jpeg" alt="" class="opacity-80 hover:opacity-100   w-[90%] lg:w-[10%] lg:my-50  w-full "/>
                 <h4 class="font-bold my-2 dark:text-cyan-50">PROFINDER - SERVICIOS</h4>
-            <article class="flex justify-between">
-              <div class="flex flex-nowrap items-center">
+                <h5 class="font-bold my-2 dark:text-cyan-50">Mejor Proyecto Grupal de la Cohorte del Bootcamp de Desarrollo Web</h5>
+            <article class="flex justify-between ">
+              <div class="flex text-center">
                 <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700 dark:text-cyan-50">Node</span>
                         <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700 dark:text-cyan-50"> React</span>
                         <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700 dark:text-cyan-50"> JavaScript</span>
@@ -360,13 +414,13 @@
     </section>
 
 
-     <h3
+     <h3 id="contactame"
         class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center"
       >
         Contáctame
       </h3>
 
-      <section class="flex flex-col w-[90%] m-auto" id="contacto">
+      <section class="flex flex-col w-[90%] m-auto" id="contact">
         <form action="" class="w-[90%] md:max-w-[600px] m-auto">
           <div>
             <input
@@ -408,7 +462,7 @@
         <!-- #5 FOOTER  -->
         <footer class="text-center mt-12 mb-5">
           <p class="hover:text-sky-500 dark:text-cyan-50">
-            Desarrollado por Nathaly Quiva.
+            Desarrollado por Nathaly Quiva usando HTML y Tailwind CSS.
           </p>
           <div class="my-2">
           
@@ -421,5 +475,9 @@
       </section>
    
     </main>
+
+    
+
+
 </body>
 </html>
