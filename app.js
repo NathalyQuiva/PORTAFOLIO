@@ -1,50 +1,46 @@
 const menuButton = document.querySelector('#menu-button');
-
 const menuItems = document.querySelector('#menu');
-
 const menuButtonSpans = document.querySelectorAll('#menu-button span');
-
 const links = document.querySelectorAll('#menu a');
-
-//abre menu 
+const darkButton = document.querySelector('#darkButton');
+const jobSection = document.querySelector('#jobSection');
+const articles = document.querySelectorAll('#jobSection article');
+const jobLinks = document.querySelectorAll('#jobSection button');
+const firstLink = document.querySelector('#link1');
 
 
 menuButton.addEventListener('click', () => {
-    menuItems.classList.toggle('hidden');
-   
-  
-    menuButtonSpans.forEach((span) => {
-      span.classList.toggle('animado');
-    });
+  menuItems.classList.toggle('hidden');
+  menuButtonSpans.forEach((span) => {
+    span.classList.toggle('animado');
   });
+});
+
 
 links.forEach((link)=> {
-    link.addEventListener('click',()=>{
-        menuItems.classList.add('hidden');
-        menuButtonSpans.forEach((span)=>{
-            span.classList.remove('animado');
-        }) 
-    })
-    
+  link.addEventListener('click',()=>{
+    menuItems.classList.add('hidden');
+    menuButtonSpans.forEach((span)=>{
+      span.classList.remove('animado');
+    }); 
+  });  
 });
 
 
 //cierra cuando maximizo 
 
-window.onresize= function () {
-    let w=window.outerWidth;
-    if(w>768){
-        menuItems.classList.add('hidden');
-        menuButtonSpans.forEach((span)=>{
-            span.classList.remove('animado')
-        })
-    }
-    
-}
+window.onresize = function () {
+  let w = window.outerWidth;
+  if(w>768){
+    menuItems.classList.add('hidden');
+    menuButtonSpans.forEach((span)=>{
+      span.classList.remove('animado');
+    });
+  }  
+};
+
 
 /**DARK MODE*/
-
-const darkButton = document.querySelector('#darkButton');
 
 darkButton.addEventListener('click', function () {
   // if set via local storage previously
@@ -56,7 +52,6 @@ darkButton.addEventListener('click', function () {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('color-theme', 'light');
     }
-
     // if NOT set via local storage previously
   } else {
     if (document.documentElement.classList.contains('dark')) {
@@ -72,12 +67,8 @@ darkButton.addEventListener('click', function () {
 
 //Job Section
 
-const jobSection = document.querySelector('#jobSection');
-const articles = document.querySelectorAll('#jobSection article');
-
 jobSection.addEventListener('click', (event) => {
   const id = event.target.dataset.id;
-
   if (id) {
     articles.forEach((article) => {
       article.classList.add('hidden');
@@ -87,8 +78,6 @@ jobSection.addEventListener('click', (event) => {
   }
 });
 
-const jobLinks = document.querySelectorAll('#jobSection button');
-const firstLink = document.querySelector('#link1');
 
 jobLinks.forEach((link) => {
   link.addEventListener('click', () => {
