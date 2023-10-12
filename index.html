@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,106 +18,93 @@
     />
     <script src="./app.js" defer></script>
     <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (
-          localStorage.getItem('color-theme') === 'dark' ||
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
           (!('color-theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      </script>
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <title>Portafolio</title>
-</head>
-<body 
-    class="bg-sky-50 text-stone-900  dark:bg-primary  dark: text-cyan-50  font-roboto" >
-   
+  </head>
+
+  <body class="bg-sky-50 text-stone-900  dark:bg-primary  dark: text-cyan-50  font-roboto" >
     <header >
-        <!--Inicio menú-->
-        <nav class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center">
-            <a href=""><img src="./img/pngwing.com.png "  alt=""   width="28"></a>
-            <div 
-            id="menu" 
-            class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden">
-                <ul  class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full">
-                    <li   class="md:px-5 hover:text-sky-600"><a href="#quienSoy">Quién Soy</a></li>
+      <!--Inicio menú-->
+      <nav class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center">
+        <a href=""><img src="./img/pngwing.com.png "  alt=""   width="28"></a>
+        <div 
+          id="menu" 
+          class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden">
+            <ul  class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full">
+              <li   class="md:px-5 hover:text-sky-600"><a href="#quienSoy">Quién Soy</a></li>
 
-                    <li  class="md:px-5 hover:text-sky-600"><a href="#habilidades">Habilidades</a></li>
+              <li  class="md:px-5 hover:text-sky-600"><a href="#habilidades">Habilidades</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="#experiencia">Experiencia</a></li>
+              <li class="md:px-5 hover:text-sky-600"><a href="#experiencia">Experiencia</a></li>
 
-                    <li class="md:px-5 hover:text-sky-600"><a href="#proyecto">Proyectos</a></li>
+              <li class="md:px-5 hover:text-sky-600"><a href="#proyecto">Proyectos</a></li>
 
-                    <li  id="contactameButton" class="md:px-5 hover:text-sky-600"><a href="#contact">Contáctame</a></li>
+              <li  id="contactameButton" class="md:px-5 hover:text-sky-600"><a href="#contact">Contáctame</a></li>
 
-                </ul>
-                <!--Modo oscuro-->
-                <button id="darkButton">
-                    <i class="bi bi-moon-stars-fill text-sky-600  text-2xl"></i>
-                </button>
-                <!--Boton menu hamburguesa-->
+            </ul>
+          <!--Modo oscuro-->
+          <button id="darkButton">
+            <i class="bi bi-moon-stars-fill text-sky-600  text-2xl"></i>
+          </button> 
+        </div>
+        
+        <!--Boton menu hamburguesa-->
 
-            
-            </div>
-            <button id="menu-button" class="absolute top-10 right-12 md:hidden">
-                <span
-                  class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-                ></span>
-                <span
-                  class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-                ></span>
-                <span
-                  class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-                ></span>
-              </button>
-        </nav>
+        <button id="menu-button" class="absolute top-10 right-12 md:hidden">
 
-
+          <span class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
+          <span class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
+          <span class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
+        </button>
+      </nav>
     </header>
 
     <main>
+      <section   id="quienSoy"   class="my-0 flex flex.col  lg:flex-row  lg:h-[500px]">
+        <div class="p-10 lg:w-[80%]">
+          <h1 class="text-sky-600 dark:text-sky-300  text-2xl font-bold  tracking-widest  leading-10"> Hola, soy </h1>
+            <p class=" py-2  text-3xl font-bold text-slate-600  dark:text-slate-300">Nathaly Quiva</p>
+            <p class="text-3xl font-bold text-slate-500  dark:text-slate-600" >Desarrolladora Web Full Stack</p>
+            <p class="mt-5  text-lg text-slate-500"> Soy una apasionada Full Stack Developer con conocimientos en lenguajes: JavaScript, Python, C#; plataforma: .NET; control de versiones: Git, GitHub, GitFlow; tecnologías: Node.js, Express.js, Sequelize, API REST, Ajax, HTML5, CSS, Tailwind CSS, React, Redux, PostgreSQL, Jira, Insomnia, Postman, Thunder Client. Programación orientada a objetos, arquitectura de datos, algoritmos y metodologías ágiles: Scrum.  Con background en Ingeniería de Petróleos y  experiencia en simulación numérica. Soy una persona positiva, proactiva, autodidacta, paciente, enfocada, diligente, cooperativa y con gran capacidad y disposición a aprender. Nivel de Inglés: B2</p>
 
-        <section   id="quienSoy"   class="my-0 flex flex.col  lg:flex-row  lg:h-[500px]">
-            <div class="p-10 lg:w-[80%]">
-                <h1 class="text-sky-600 dark:text-sky-300  text-2xl font-bold  tracking-widest  leading-10"> Hola, soy </h1>
-                <p class=" py-2  text-3xl font-bold text-slate-600  dark:text-slate-300">Nathaly Quiva</p>
-                <p class="text-3xl font-bold text-slate-500  dark:text-slate-600" >Desarrolladora Web Full Stack</p>
-                <p class="mt-5  text-lg text-slate-500">Soy una apasionada Desarrolladora Web Full Stack Junior con una sólida formación en ingeniería petrolera, experiencia como profesor de matemáticas-física. Mi combinación única de habilidades técnicas y analíticas me permite abordar la resolución de problemas con un enfoque creativo, lo que me ayuda a crear aplicaciones web innovadoras y fáciles de usar.</p>
+        <!--Redes-->
+        <div class=" py-6">
+          <a href="./img/Full Stack Junior. Ingeniero Petróleos Nathaly Quiva.pdf"
+            class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg dark:text-white tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+            target="_blank" 
+            download> Descargar Hoja de Vida </a> 
 
-              
-              
-                <!--Redes-->
-                <div class=" py-6">
-                    
-                  <a href="./img/Full Stack Junior. Ingeniero Petróleos Nathaly Quiva.pdf"
-                  class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg dark:text-white tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"target="_blank" download
-                >
-                  Descargar Hoja de Vida
-              </a> 
-
-                    <a href="https://www.linkedin.com/in/nathalyquiva/" class="pr-2 text-2xl hover:text-sky-600 dark:text-white hover:dark:text-sky-600""
-                      ><i class="bi bi-linkedin px-2 "></i
-                    ></a>
-                    <a href="" class="pr-2 text-2xl hover:text-sky-600   dark:text-white hover:dark:text-sky-600"
-                      ><i class="bi bi-github px-2"></i
-                    ></a>
-                  </div>
-                  <div>
-                    <button
-                      class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg dark:text-white tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
-                    >
-                      Contáctame
-                    </button>
-                  </div>
-                </div>
+          <a href="https://www.linkedin.com/in/nathalyquiva/" 
+            class="pr-2 text-2xl hover:text-sky-600 dark:text-white hover:dark:text-sky-600"">
+            <i class="bi bi-linkedin px-2 "></i
+          ></a>
+          <a href="" 
+            class="pr-2 text-2xl hover:text-sky-600   dark:text-white hover:dark:text-sky-600">
+            <i class="bi bi-github px-2"></i
+          ></a>
+          
+        </div>
+        <div>
+          <button class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg dark:text-white tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+            >Contáctame </button>
+        </div>
+        
    <!-- Contenedor para la Imagen 
    <div class="my-10 w-full">
     <div
       class="w-[300px] h-[320px] m-auto bg-[url('./img/profile.jpg')] lg:bg-[url('./img/profile.jpg')] bg-cover rounded-lg lg:w-[100%] lg:h-[100%] lg:bg-center lg:bg-no-repeat lg:bg-[length:450px_576px]"
     ></div>-->
-  </div>
+ 
         </section>
 
 
